@@ -1,0 +1,233 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+
+/*
+void line()
+{
+	puts("======================================");
+}
+
+int main() {
+	
+	line();
+	puts("line  함수를 호출하였습니다.");
+	puts("line  함수를 다시 호출합니다.");
+	line();
+
+	return 0;
+
+}
+
+void line()
+{
+	puts("~!@#$%^&* ()_ + |");
+}
+int main()
+{
+	line();
+	line();
+	line();
+}
+*/
+
+/*
+void pluus(int su)
+{
+	printf("10 큰수 : %.2f" , su*su*3.14);
+}
+
+
+int main()
+{
+	int num;
+	scanf("%d", &num);
+
+	pluus(num);
+
+	return 0;
+}*/
+/*/
+void star(int n)
+{
+	int i, j;
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < i; j++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+	int num;
+	
+	scanf(" %d", &num);
+	star(num);
+	
+	return 0;
+}*/
+/*
+void star(int n)
+{
+	int i, j;
+	int num = 1;
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			printf("%3d",num);
+			num++;
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+	int num;
+
+	scanf(" %d", &num);
+	star(num);
+
+	return 0;
+}*/
+/*
+int add(int x, int y ,int z)
+{
+	if (x > y || x > z) return x;
+	else if (y > z) return y;
+	else return z;
+}
+
+int main()
+{
+	int a, b, c;
+
+	scanf(" %d %d %d", &a, &b, &c);
+
+	printf("%d", add(a, b, c));
+
+	return 0;
+}
+
+
+double pyung(int a, int b, int c)
+{
+	return (a + b + c )/3.0;
+}
+int main()
+{
+	int x, y, z;
+	double avg;
+	scanf(" %d %d %d", &x, &y, &z);
+
+	avg = pyung(x, y, z);
+	printf(" %.2lf",avg );
+
+	return 0;
+	}
+*/
+
+/*
+math 함수를 넣었어야함 
+
+int pyung( int a, int b)
+{
+	return pow(a, b);
+}
+int main()
+{
+	int x, y;
+
+	scanf(" %d %d", &x, &y);
+
+	printf("%d", pyung(x, y));
+
+	return 0;
+
+}
+
+int sna(int x, int y, char z)
+{
+	switch (z)
+	{
+	case '+':
+		return x + y;
+	case '-':
+		return x - y;
+	case '/':
+		return x / y;
+	case '*':
+		return x * y;
+	}
+	return 0;
+}
+int main() {
+	int a, b;
+	char c;
+
+	scanf("%d %c %d", &a, &c, &b);
+	printf("%d %c %d = %d\n", a, c, b, sna(a, b, c));
+	return 0;
+} */
+
+
+/*
+c++에서 해야되는 것 같은데 
+void swwap(int x, int y) {
+	int imsi;
+
+	imsi = x;
+	x = y;
+	y = imsi;
+
+	printf("첫 번째 함수 실행중 x=%d,y=%d \n", x, y);
+
+}
+
+void swwapfe (int &x, int &y) {
+	int imsi;
+
+	imsi = x;
+	x = y;
+	y = imsi;
+
+	printf("두번째 함수 실행중x=%d,y=%d \n", x, y);
+}
+int main()
+{
+	int a, b;
+	printf("두 수를 입력하세요.");
+	scnaf("%d %d ", &a, &b);
+
+	swwap(a, b);
+	printf("첫 번째 함수 실행 후 a= %d,b= %d \n", a, b);
+
+	swwapfe(a, b);
+	printf("첫 번째 함수 실행 후 a= %d,b= %d \n", a, b);
+
+	return 0;
+	
+}
+*/
+
+/*
+int a, b;
+int hap, gop;
+
+void input()
+{
+	printf("두 수를 입력하세요: ");
+	scanf("%d %d", &a, &b);
+}
+void gesan()
+{
+	hap = a + b;
+	gop = a * b;
+}
+int main() {
+	input();
+	gesan();
+	printf("%d %d ", hap, gop);
+
+	return 0;
+}
+*/
