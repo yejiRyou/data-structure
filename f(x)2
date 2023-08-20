@@ -192,6 +192,8 @@ int main() {
 }
 
 */
+
+/*
 #define MULTI(x,y)pow(((x)-(y)),2)
 #define MULTII(x,y)pow(((x) + (y)),3)
 
@@ -207,3 +209,53 @@ int main() {
 
 	return 0;
 }
+*/
+
+// 버블 정렬
+
+// 배열이 바뀔때마다 출력 , 내림차순
+
+#define N 5
+#define SWAP(x,y){int z=x;x=y;y=z;}
+
+void input(int a[], int cnt) {
+	int i;
+	for (i = 0; i < N; i++) {
+		scanf("%d", &a[i]);
+	}
+
+}
+// 버블정렬
+void sort(int a[], int cnt) {
+	int i, j;
+	for (i = cnt - 1; i > 0; i--) {
+		for (j = 0; j < i; j++) {
+			if (a[j] < a[j + 1]) {
+				SWAP(a[j], a[j + 1]);
+			}
+		}
+
+		// 정렬 과정 출력
+		printf("Step %d: ", (cnt - i));
+		for (j = 0; j < N; j++) {
+			printf("%3d", a[j]);
+		}
+		printf("\n");
+	}
+}
+void output(int a[]) {
+	int i;
+	for (i = 0; i < N; i++) {
+		printf("%3d", a[i]);
+	}
+}
+int main() {
+	int arr[N];
+	input(arr, N);
+	sort(arr, N);
+	output(arr);
+
+	return 0;
+
+}
+
