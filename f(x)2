@@ -1,0 +1,209 @@
+//함수 2
+
+/*
+int main() {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	double c, d;
+	scanf("%lf %lf", &c, &d);
+
+	printf("%d", abs(a - b));
+	printf(" %f", fabs(c - d));
+
+	return 0;
+}
+
+
+int main() {
+	int a, b;
+	double c, d;
+
+	scanf("%d %d", &a, &b);
+	scanf("%lf %lf", &c, &d);
+	
+	if (abs(a) > abs(b)) printf("%d\n", a);
+	else printf("%d\n", b);
+	
+
+	if (fabs(c) < fabs(d)) printf("%lf\n", c);
+	else printf("%lf\n", d);
+
+	return 0;
+}
+*/
+
+/*
+int main() {
+	double area;
+	double base;
+	double exp;
+
+	printf("정사각형 넓이 : ");
+	scanf("%lf", &area);
+	printf("정사각형 한 변의 길이: %lf\n", sqrt(area)); //제곱근
+
+	printf("정사각형 밑과 지수:");
+	scanf("%lf %lf", &base, &exp);
+	printf("%lf의 %lf 승은 %lf 입니다. ",base,exp,pow(base,exp)); //거듭제곱
+
+	return 0;
+}
+*/
+/* 자가진단 4번
+int main() {
+	int a;
+
+	printf("원의 넓이: ");
+	scanf("%d", &a);
+	
+	printf("%.lf", sqrt(a/3.14));
+
+	return 0;
+}
+*/
+
+/*
+int main()
+{
+	int radius;
+	double area, pie = 3.14;
+
+	printf("원의 반지름: ");
+	scanf("%d", &radius);
+
+	area = pow(radius, 2) * pie;
+
+	printf("원의 넓이: %.lf \n",area);
+	printf("버림: %.lf \n",floor(area));
+	printf("반올림:%.lf \n",floor(area + 0.5));
+	printf("올림:%.lf \n",floor(area+1));
+
+	return 0;
+}
+*/
+
+//좀 돌아온 자가진단 5
+
+/*
+double lar(double x, double y, double z) {
+	
+	double max_val;
+
+	if (x >= y && x >= z) {
+		max_val = x;
+	}
+	else if (y >= x && y >= z) {
+		return max_val = y;
+	}
+	else {
+		return max_val = z;
+	}
+
+	return max_val;
+}
+double sma(double q, double w, double e) {
+
+	double min_val;
+
+	if (q <= w && q <= e) {
+		min_val = q;
+	}
+	else if (w <= q && w <= e) {
+		min_val = w;
+	}
+	else {
+		min_val = e;
+	}
+
+	return min_val;
+}
+
+
+int main()
+{
+	double a, b, c;
+
+	scanf(" %lf %lf %lf", &a, &b, &c);
+
+	lar(a, b, c);
+	sma(a, b, c);
+
+	printf("largest : %lf\n", floor(lar(a, b, c)+ 1));
+	printf("smallest : %lf\n", floor(sma(a,b,c)));
+
+
+	if (a != lar(a, b, c) && a != sma(a, b, c)) {
+		return printf(" 그 밖: %.lf ",floor(a+0.5));
+	}
+	else if (b != lar(a, b, c) && b != sma(a, b, c)) {
+		return printf(" 그 밖: %.lf ", floor(b + 0.5));
+	}
+	else {
+		return printf(" 그 밖: %.lf ", floor(c + 0.5));
+	}
+
+
+	return 0;
+}
+	
+	*/
+/*
+
+int main() {
+	double r, ci;
+	const double PI=3.14;
+
+	scanf("%lf", &r);
+	ci = r * 2 * PI;
+	printf("원의 둘레: %.2lf", ci);
+
+	return 0;
+}
+*/
+
+/*
+#define one 1
+#define two 2
+#define three 3
+
+int main() {
+	int i, j;
+	for (i = one; i <= three; i++) {
+		for (j = one; j <= three; j++) {
+			printf("%d + %d =%d \n", i, j, i + j);
+		}
+	}
+	return 0; 
+}
+*/
+
+
+/*자가진단 8번*/
+/*
+#define MULTI(x,y)(x)*(y)
+
+int main() {
+	int a, b, c;
+	scanf("%d %d", &a, &b);
+	c = MULTI(a + 10, b - 5);
+	printf("%d", c);
+
+	return 0;
+}
+
+*/
+#define MULTI(x,y)pow(((x)-(y)),2)
+#define MULTII(x,y)pow(((x) + (y)),3)
+
+int main() {
+	int a, b, c, d;
+	scanf("%d %d", &a, &b);
+	
+	c = MULTI(a,b);
+	d = MULTII(a,b);
+	
+	printf("(%d-%d)^2=%d",a,b,c);
+	printf("\n(%d+%d)^3=%d",a,b,d);
+
+	return 0;
+}
