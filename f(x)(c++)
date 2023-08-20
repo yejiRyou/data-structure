@@ -97,3 +97,175 @@ int main()
 	return 0;
 }
 */
+//함수 2 추가
+
+//함수2 1번
+/*
+
+void input(int a[], int cnt)
+{
+	int i;
+	for (i = 0; i < cnt; i++) {
+		scanf("%d", &a[i]);
+	}
+}
+
+void output(int a[], int cnt) {
+	int i;
+	for (i = 0; i < cnt; i++) {
+		printf("%d ", a[i]);
+	}
+	printf("\n");
+}
+void swap(int& x, int& y) {
+	int imsi;
+	imsi = x;
+	x = y;
+	y = imsi;
+}
+void sort(int a[], int cnt) { //선택정렬 오름차순
+	int i, j;
+	for (i = 0; i < cnt - 1; i++) {
+		for (j = i + 1; j < cnt; j++) {
+			if (a[i] > a[j]) {
+				swap(a[i], a[j]);
+			}
+		}
+	}
+}
+int main() {
+	int arr[6];
+
+	input(arr, 6);
+	sort(arr, 6);
+	output(arr, 6);
+
+	return 0;
+}
+*/
+/*
+void input(int a[], int cnt)
+{
+	int i;
+	for (i = 0; i < cnt; i++) {
+		scanf("%d", &a[i]);
+	}
+}
+
+void output(int a[], int cnt) {
+	int i;
+	for (i = 0; i < cnt; i++) {
+		printf("%d ", a[i]);
+	}
+	printf("\n");
+}
+void swap(int& x, int& y) {
+	int imsi;
+	imsi = x;
+	x = y;
+	y = imsi;
+}
+void sort(int a[], int cnt) { //선택정렬 오름차순
+	int i, j;
+	for (i = 0; i < cnt - 1; i++) {
+		for (j = i + 1; j < cnt; j++) {
+			if (a[i] < a[j]) {
+				swap(a[i], a[j]);
+			}
+		}
+	}
+}
+int main() {
+	int arr[6],n;
+
+	scanf("%d", &n);
+
+	input(arr, n);
+	sort(arr, n);
+	output(arr, n);
+
+	return 0;
+}
+*/
+
+/*함수 2번 
+
+void input(int a[], int cnt) {
+	int i;
+	for (i = 0; i < cnt; i++) {
+		scanf("%d", &a[i]);
+	}
+}
+bool suhang(int a[], int cnt) {
+	int i, sum = 0, avg;
+
+	for (i = 0; i < cnt; i++) {
+		if (a[i] < 40) return false;
+		sum += a[i];
+	}
+	avg = sum / cnt;
+
+	if (avg < 60)return false;
+	else return true;
+}
+
+
+int main() {
+	int arr[3];
+
+	input(arr, 3);
+	if (suhang(arr, 3)) { //여기가 중요한것임 여기가 1이면 합격을 프린트 0이면 거짓이므로 불합격
+		printf("축 합격");
+	}
+	else printf("불합격");
+
+	return 0;
+}
+*/
+/*/
+bool isValidDate(int month, int day) {
+	if (month < 1 || month > 12) {
+		return false;  // Invalid month
+	}
+
+	if (day < 1) {
+		return false;  // Invalid day
+	}
+
+	// Check days for each month
+	int daysInMonth;
+	switch (month) {
+	case 2: // February
+		daysInMonth = 28;
+		break;
+	case 4: case 6: case 9: case 11: // April, June, September, November
+		daysInMonth = 30;
+		break;
+	default:
+		daysInMonth = 31;
+		break;
+	}
+
+	if (day > daysInMonth) {
+		return false;  // Invalid day for the given month
+	}
+
+	return true; // Valid date
+}
+
+int main() {
+	int month, day;
+
+	printf("Enter month and day: ");
+	scanf("%d %d", &month, &day);
+
+	if (isValidDate(month, day)) {
+		printf("통과\n");
+	}
+	else {
+		printf("불통\n");
+	}
+
+	return 0;
+}
+*/
